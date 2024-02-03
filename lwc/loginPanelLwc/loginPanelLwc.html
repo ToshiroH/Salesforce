@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  variant="Narrow">
+        <div class="slds-m-around_medium">
+            <template if:true={error}>
+                <span class="slds-text-color_error">{error}</span>
+            </template>
+            <lightning-input type="text" variant="brand-outline" name="Username" stretch placeholder="Username" icon-name="utility:user" onchange={handleUsernameChange}></lightning-input>
+            <lightning-input type="password" variant="brand-outline" name="Password" stretch placeholder="Password" icon-name="utility:password" onchange={handlePasswordChange}></lightning-input>
+            <br/>
+            <lightning-button variant="brand" label="Login" title="Login" stretch onclick={handleClick}></lightning-button>
+
+            <br/>
+
+            <div class="slds-col slds-var-p-top_small">
+                    <a href="/bettereveryday/s/login/ForgotPassword" class="forgot-password-text">Forgot your password?</a><br/>
+                    <a href="/bettereveryday/s/login/SelfRegister" class="register-text">Register</a>
+            </div>
+        </div>
+    </lightning-card>
+</template>

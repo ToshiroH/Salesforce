@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Binding Demo" icon-name="utility:advertising">
+    <div class="slds-p-around_medium">
+        <p>Name : {firstName} {lastName}</p>
+        <lightning-input label="First Name" value={firstName} name="firstName" onchange={handleChange}></lightning-input>
+        <lightning-input label="Last Name" value={lastName} name="lastName" onchange={handleChange}></lightning-input>
+    </div>
+    
+</lightning-card>
+</template>

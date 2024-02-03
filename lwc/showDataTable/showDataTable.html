@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Data Table Details" icon-name="utility:description">
+        <div slot="actions">
+        <lightning-button label="Deleto!" icon-name="utility:delete" onclick={deleteIt}></lightning-button>
+    </div>
+        <div>
+ <lightning-datatable key-field="Id" data={contacts} columns={columns}
+                        max-row-selection="1" onrowselection={handleSelection}></lightning-datatable>   
+</div>
+</lightning-card>
+</template>

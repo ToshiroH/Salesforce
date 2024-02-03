@@ -1,0 +1,8 @@
+<template>
+    <h1>Send Email!</h1>
+    <h5>Sender Email removed for personal sanctity xD Mail will not send</h5>
+    <lightning-input id="input1" label="Subject" max-length="255" onchange={setSub}></lightning-input>
+    <lightning-textarea id= "input2" label="Message"  placeholder="Type Message Here" onchange={setMsg}></lightning-textarea>
+    <lightning-file-upload label="Upload Files" multiple="true" accept=".pdf, .png, .txt" onuploadfinished={uploadFiles}></lightning-file-upload>
+    <lightning-button id="output1" label="Email-o!" variant="brand" onclick={sendMsg}></lightning-button>
+</template>

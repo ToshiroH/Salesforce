@@ -1,0 +1,20 @@
+.dummy{
+	color : blue;
+}
+:host {
+    --sds-c-card-color-background: #b0b5b7;
+}
+
+.forgot-password-text {
+
+    color: #CCBFBF;
+    font-size: 14px;
+    text-align: left;
+}
+
+.register-text {
+
+    color: #CCBFBF;
+    font-size: 14px;
+    float: right;
+}

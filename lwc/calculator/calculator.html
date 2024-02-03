@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Calculator" icon-name="utility:advanced_function">
+    <div class="slds-p-around_medium">
+        <lightning-input label="First Number" value={firstNumber} name="firstNumber" onchange={handleChange}></lightning-input>
+        <lightning-input label="Last Number" value={lastNumber} name="lastNumber" onchange={handleChange}></lightning-input>
+        <p>Result : {result}</p>
+        <lightning-button label="Add" onclick={doAdd}>Add</lightning-button>
+        <lightning-button label="Sub" onclick={doSub}>Sub</lightning-button>
+        
+    </div>
+    
+</lightning-card>
+</template>

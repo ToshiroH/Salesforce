@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Async Contact Details" icon-name="custom:custom11">
+        <div class=slds-p-around_medium>
+            <lightning-button label="Show Details" onclick={handleClick}></lightning-button>
+            <lightning-button label="Hide Details" onclick={handleHe}></lightning-button>
+            <table class="slds-table slds-table_bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Title</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={contacts} for:item="contact">
+                        <tr key={contact.Id}>
+                            <td>{contact.Name}</td>
+                            <td>{contact.Title}</td>
+                            <td>{contact.Phone}</td>
+                            <td>{contact.Email}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<template>
+    <lightning-modal-header label="Error Encountered"></lightning-modal-header>
+    <lightning-modal-body>
+        <template lwc:if={error}>
+            <c-error-panel errors={error}></c-error-panel>
+        </template>
+        <template lwc:else>
+            <span>Hehe lol looks like the error modal popped up without reason.</span>
+            <div class="slds-p-around_medium">{error}</div>
+        </template>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <!-- Footer here --> 
+        Better Every Day.
+    </lightning-modal-footer>
+</template>

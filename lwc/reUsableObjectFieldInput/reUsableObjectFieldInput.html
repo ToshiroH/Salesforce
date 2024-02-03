@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="Object Field Finder" icon-name="utility:activity">
+    <div>
+        <lightning-combobox
+            name="object"
+            label="Object Name"
+            value={objectValue}
+            placeholder="Select Object"
+            options={objectOptions}
+            onchange={handleChangeObject}
+            required>
+        </lightning-combobox>
+        <lightning-combobox
+            name="Fields"
+            label="Select Field"
+            value={showFieldValue}
+            placeholder="Select Field"
+            options={fieldOptions}
+            onchange={handleChangeField}
+            disabled={disableFieldOptions}
+            required>
+        </lightning-combobox>
+        <lightning-input type="text" label="fieldValue(editable): " value={fieldValue} onblur={handleChangeFieldManual} disabled={disableOnlyInputFieldButton}></lightning-input>
+        <lightning-button label="InputButton" title="Add as Input Only Field" onclick={handleClickInputButton} class="slds-m-left_x-small" disabled={disableOnlyInputFieldButton}></lightning-button>
+        <lightning-input type="text" label="Enter Condition: " value={conditionValue} onblur={handleChangeCondition} disabled={disableOnlyInputFieldButton}></lightning-input>
+        <lightning-button label="EnterButton" title="Add Condition" onclick={handleClickInputButton} class="slds-m-left_x-small" disabled={disableAddConditionButton}></lightning-button>
+        <!--<lightning-button label="InsertButton" title="Add This Eligibility" onclick={handleClickInputButton} class="slds-m-left_x-small" disabled={disableAddNextButton}></lightning-button>-->
+    </div>
+    <div>
+        <lightning-datatable
+                key-field="objectName"
+                data={mapValues}
+                columns={columns}>
+            </lightning-datatable>
+    </div>
+</lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Track Demo" icon="custom:custom 12">
+        <div>
+            <template for:each={products} for:item="product">
+                {product}&nbsp;
+            </template>
+        </div>
+        <div>
+            Full Name ==> {full.lastName}  {full.firstName}
+        </div>
+        <div>
+            <lightning-button label="Change Products" onclick={handleClick}></lightning-button>
+            <lightning-button label="Update Products" onclick={handleClicky}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

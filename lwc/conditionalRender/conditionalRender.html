@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Show Func" icon-name="custom:custom1">
+        <div class="slds-p-around_medium">
+            <lightning-input type="checkbox" label="Lets Show Functions" value={show} onchange={handleChange}></lightning-input>
+            <template if:false={show}>
+            <p>This shows if true</p>
+            </template>
+            <div if:true={show}>
+                This shows if false
+            </div>
+        </div>
+        </lightning-card>
+</template>

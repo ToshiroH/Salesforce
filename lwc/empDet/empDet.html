@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Employee Details" icon-name="utility:einstein">
+    <div class="slds-p-around_medium">
+        <template for:each={employee} for:item="emp">
+           <ul key={emp.id}>
+                <p>{emp.name} :: {emp.post}</p>
+           </ul> 
+        </template>
+    </div>
+    
+</lightning-card>
+</template>

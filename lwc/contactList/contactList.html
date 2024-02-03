@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Contact List for Mail" icon-name="custom:custom10">
+        <div>
+            <lightning-datatable key-field="Id" data={contacts} columns={columns} selected-rows={selectedIds} onrowselection={handleSelection}></lightning-datatable>
+        </div>
+        <div>
+        <template if:true={sel}>
+            <template for:each={output} for:item="em">
+                <lightning-button label={em.Email} value={em.Email} key={em.Id} onclick={handleClick}></lightning-button>
+            </template>
+        </template>
+        </div>
+    </lightning-card>
+    
+    <lightning-card title="Mail Temp" icon-name="custom:custom11">
+        <c-send-mail emails={email}></c-send-mail>
+    </lightning-card>
+</template>
